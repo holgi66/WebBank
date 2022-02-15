@@ -41,6 +41,22 @@ public class TransactionClass extends BaseObjectImpl implements Transaction{
 
 
 
+	public TransactionClass(RepositoryTransactionClass parent, Float amount, Receiver receiver,
+			Iban iban, String purpose, LocalDateTime date) {
+		// TODO Auto-generated constructor stub
+		super(parent);
+		this.amount = amount;
+		this.receiver = receiver;
+		this.iban = iban;
+		this.purpose = purpose;
+		this.date = date;
+	}
+
+
+
+
+
+
 	@Override
 	public int getId() {
 		return id;

@@ -2,6 +2,9 @@ package de.telekom.sea7.impl;
 
 import java.util.List;
 
+import org.springframework.stereotype.Controller;
+
+@Controller
 public interface BaseObject {
 
 	int getId();

@@ -14,11 +14,6 @@ public class ReceiverImpl extends BaseObjectImpl implements Receiver {
 	
 	public ReceiverImpl(Object parent, String name) {
 		super(parent);
-//		this.id = id;
-//		this.country = country;
-//		this.zipcode = zipcode;
-//		this.city = city;
-//		this.street = street;
 		this.name = name;
 	}
 

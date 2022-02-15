@@ -10,8 +10,6 @@ import java.util.List;
 
 import de.telekom.sea7.impl.ApplicationImpl;
 import de.telekom.sea7.impl.BaseObjectImpl;
-import de.telekom.sea7.inter.model.Bic;
-import de.telekom.sea7.inter.model.Iban;
 import de.telekom.sea7.inter.model.Receiver;
 import de.telekom.sea7.inter.model.Repository;
 
