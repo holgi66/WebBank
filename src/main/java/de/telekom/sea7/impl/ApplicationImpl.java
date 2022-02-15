@@ -6,13 +6,15 @@ import java.time.LocalDateTime;
 import java.util.Properties;
 import java.util.Scanner;
 
-import de.telekom.sea7.impl.model.RepositoryTransactionImpl;
-import de.telekom.sea7.impl.model.TransactionImpl;
-import de.telekom.sea7.impl.view.RepositoryTransactionViewImpl;
+import org.springframework.stereotype.Controller;
+
+import de.telekom.sea7.impl.model.RepositoryTransactionClass;
+import de.telekom.sea7.impl.view.RepositoryTransactionViewClass;
 import de.telekom.sea7.inter.model.Repository;
 import de.telekom.sea7.inter.model.Transaction;
 import de.telekom.sea7.inter.view.RepositoryTransactionView;
 
+@Controller
 public class ApplicationImpl extends BaseObjectImpl implements Application {
 	private static ApplicationImpl applicationImpl;
 	public Connection connection;
@@ -35,8 +37,8 @@ public class ApplicationImpl extends BaseObjectImpl implements Application {
 		try {
 			initConnection();
 			try (Scanner scanner = new Scanner(System.in)) {
-				Repository<Transaction> transactionRepo = new RepositoryTransactionImpl(this);
-				RepositoryTransactionView transactionListView = new RepositoryTransactionViewImpl(this, scanner, transactionRepo);
+				Repository<Transaction> transactionRepo = new RepositoryTransactionClass(this);
+				RepositoryTransactionView transactionListView = new RepositoryTransactionViewClass(this, scanner, transactionRepo);
 				transactionListView.menu();
 			}
 			connection.close();

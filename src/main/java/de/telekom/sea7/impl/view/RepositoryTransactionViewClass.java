@@ -21,7 +21,6 @@ import de.telekom.sea7.inter.model.Receiver;
 import de.telekom.sea7.inter.model.Repository;
 import de.telekom.sea7.inter.model.Transaction;
 import de.telekom.sea7.inter.view.RepositoryTransactionView;
-import de.telekom.sea7.inter.view.TransactionView;
 
 @Controller
 public class RepositoryTransactionViewClass extends BaseObjectImpl implements RepositoryTransactionView {
@@ -156,8 +155,8 @@ public class RepositoryTransactionViewClass extends BaseObjectImpl implements Re
 
 		try {
 			Transaction transaction = transactionRepo.get(index);
-			TransactionView transactionView = new TransactionViewImpl(this, this.scanner, transaction);
-			transactionView.menu();
+			TransactionClass transactionClass = new TransactionClass(this, this.scanner, transaction);
+			transactionClass.menu();
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 		}

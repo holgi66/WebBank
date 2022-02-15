@@ -3,6 +3,9 @@ package de.telekom.sea7.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Controller;
+
+@Controller
 public class BaseObjectImpl implements BaseObject {
 	private int id;
 	private Object parent;

@@ -3,7 +3,6 @@ package de.telekom.sea7.impl.model;
 import de.telekom.sea7.impl.BaseObjectImpl;
 import de.telekom.sea7.inter.model.Bic;
 import de.telekom.sea7.inter.model.Iban;
-import javax.persistence.*;
 
 
 public class IbanImpl extends BaseObjectImpl implements Iban {
@@ -11,7 +10,7 @@ public class IbanImpl extends BaseObjectImpl implements Iban {
 	private int id;
 	private String iban;
 	
-	@ManyToOne
+	
 	private Bic bic;
 	
 	public IbanImpl(Object parent, String iban, Bic bic) {
