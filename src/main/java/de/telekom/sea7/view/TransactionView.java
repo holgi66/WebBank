@@ -8,41 +8,18 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class TransactionView {
 	
 	
-//	@GetMapping("/index.html")
-//	@ResponseBody
-//	public String getHtml() {
-//	String html =
-//	"<!doctype html>"
-//	  + "<html>"
-//	    + " <head>"
-//	      + " <title>Anzeigen einer Ansicht mit Html</title>"
-//	    + " </head>"
-//	      
-//	    + " <body>"
-//	      + " <p> Name: </p>"
-//	      + "</br>"
-//	      + " <p> Iban: </p>"
-//	      + "</br>"
-//	      + " <p> Betrag: </p>"
-//	      + "</br>"
-//	      + " <p> Zweck: </p>"
-//	      + "</br>"
-//	    + " </body>"
-//	  + "</html>";
-//	return html;
-//	}
-
-	@GetMapping("/transaction.json")
+	@GetMapping("/transaction.getjson")
 	@ResponseBody
-	public String getJson() {
+	public String getjson() {
 		
-			String json = {
-		        ("Name:" : "Horst"),
-		           ("IBAN:" : "DE21123456234545"),
-		           ("Betrag:" : "50"),
-		           ("Zweck" : "Steuer")
-			}
+		return	String.format(
+		    "{ "
+		    + "\"Name:\" : \"Horst\","
+		    + "\"IBAN:\" : \"DE21123456234545\","
+		    + "\"Betrag:\" : \"50\","
+		    + "\"Zweck:\" : \"Steuer\"  "
+		    + "}");
 					
-	return json;
+	
 	}
 }
