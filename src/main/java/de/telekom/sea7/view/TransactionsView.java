@@ -5,12 +5,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class TransactionView {
+public class TransactionsView {
 	
-	
-	@GetMapping("/transaction.gettransaction")
+	@GetMapping("/transactions.gettransactions")
 	@ResponseBody
-	public String gettransaction() {
+	public String gettransactions() {
 		
 		return	String.format(
 		    "{ "
@@ -22,4 +21,5 @@ public class TransactionView {
 					
 	
 	}
+
 }
