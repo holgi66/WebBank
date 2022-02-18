@@ -2,7 +2,15 @@ package de.telekom.sea7.model;
 
 import java.time.LocalDateTime;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Controller;
+
+@Controller
+
 public interface Transaction {
+	
+	
 	int getId();
 	
 	float getAmount();
