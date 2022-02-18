@@ -10,10 +10,13 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-
 public class DbConnection {
 	
+	
 	public Connection connection;
+	public RepositoryTransactionImpl repositoryTransactionImpl;
+	
+	
 	
 	public void initConnection() throws SQLException {
 		Properties connectionProps = new Properties();
@@ -22,5 +25,6 @@ public class DbConnection {
 		connection = DriverManager.getConnection("jdbc:mariadb://localhost:3306/bank", connectionProps);
 		System.out.println("Connected to database");
 	}
+	
 
 }
