@@ -1,11 +1,19 @@
 package de.telekom.sea7.view;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import de.telekom.sea7.model.Transaction;
+import de.telekom.sea7.model.Transactions;
+import de.telekom.sea7.services.TransactionsClass;
+
 @Controller
 public class TransactionsView {
+	
+	@Autowired
+	private TransactionsClass transactionsClass;
 	
 	@GetMapping("/transactions.gettransactions")
 	@ResponseBody
@@ -28,5 +36,9 @@ public String getHtml() {
 				+ "</body>"
 				+"</html>";
 		return html;
+	}
+	@ResponseBody
+	public TransactionsClass getTransactionsClass() {
+		return getTransactionsClass();
 	}
 }
