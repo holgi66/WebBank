@@ -1,20 +1,15 @@
 package de.telekom.sea7.view;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import de.telekom.sea7.model.Transaction;
 import de.telekom.sea7.services.TransactionClass;
-import de.telekom.sea7.services.TransactionsClass;
 
+@Component
 @Controller
 public class TransactionView {
-	
-	@Autowired
-	private TransactionClass transactionClass;
-	
 	
 	@GetMapping("/transaction.getTransaction")
 	
