@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class TransactionView {
 	
 	
-	@GetMapping("/transaction.getjson")
+	@GetMapping("/transaction.gettransaction")
 	@ResponseBody
-	public String getjson() {
+	public String gettransaction() {
 		
 		return	String.format(
 		    "{ "
