@@ -18,7 +18,7 @@ import de.telekom.sea7.model.Iban;
 import de.telekom.sea7.model.Receiver;
 import de.telekom.sea7.model.Transaction;
 
-@Repository
+
 public class RepositoryTransactionImpl extends DbConnection  {
 	
 	private String sqlForGetAll = "SELECT * FROM transactions";
