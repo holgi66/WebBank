@@ -1,4 +1,4 @@
-package de.telekom.sea7.viewinter;
+package de.telekom.sea7.model;
 
 
 
