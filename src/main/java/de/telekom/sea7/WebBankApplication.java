@@ -1,4 +1,4 @@
-package de.telekom.sea7.view;
+package de.telekom.sea7;
 
 
 import org.springframework.boot.SpringApplication;
