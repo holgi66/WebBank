@@ -10,7 +10,7 @@ import org.springframework.stereotype.Controller;
 
 public interface Transaction {
 	
-	
+	@Bean
 	int getId();
 	
 	float getAmount();
