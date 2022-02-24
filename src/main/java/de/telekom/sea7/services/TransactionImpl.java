@@ -15,16 +15,16 @@ public class TransactionImpl implements Transaction {
 	private String purpose;
 	private LocalDateTime date;
 
-	public TransactionImpl(Object parent, float amount, Receiver receiver, Iban iban, String purpose,
-			LocalDateTime date) {
-		super();
-		this.amount = amount;
-		this.receiver = receiver;
-		this.iban = iban;
-		this.purpose = purpose;
-		this.date = date;
+	public TransactionImpl(float amount, Receiver receiver, Iban iban, String purpose, LocalDateTime date) {		
+		amount = this.amount;
+		receiver = this.receiver;
+		iban = this.iban;
+		purpose = this.purpose;
+		date = this.date;
 	}
 	
+	
+
 	public int getId() {
 		return id;
 	}
