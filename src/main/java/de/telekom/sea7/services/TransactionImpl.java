@@ -24,7 +24,6 @@ public class TransactionImpl implements Transaction {
 		this.purpose = purpose;
 		this.date = date;
 	}
-
 	
 	public int getId() {
 		return id;
