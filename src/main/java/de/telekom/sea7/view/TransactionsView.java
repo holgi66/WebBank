@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import de.telekom.sea7.services.TransactionsClass;
+import de.telekom.sea7.services.TransactionsService;
 
 @Component
 @Controller
@@ -34,7 +34,7 @@ public String getHtml() {
 		return html;
 	}
 	@ResponseBody
-	public TransactionsClass getTransactionsClass() {
+	public TransactionsService getTransactionsClass() {
 		return getTransactionsClass();
 	}
 }

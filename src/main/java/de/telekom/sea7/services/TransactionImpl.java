@@ -2,10 +2,13 @@ package de.telekom.sea7.services;
 
 import java.time.LocalDateTime;
 
+import org.springframework.stereotype.Service;
+
 import de.telekom.sea7.model.Iban;
 import de.telekom.sea7.model.Receiver;
 import de.telekom.sea7.model.Transaction;
 
+@Service
 public class TransactionImpl implements Transaction {
 
 	private float amount;
@@ -15,15 +18,13 @@ public class TransactionImpl implements Transaction {
 	private String purpose;
 	private LocalDateTime date;
 
-	public TransactionImpl(float amount, Receiver receiver, Iban iban, String purpose, LocalDateTime date) {		
+	public TransactionImpl(float amount, Receiver receiver, Iban iban, String purpose, LocalDateTime date) {
 		amount = this.amount;
 		receiver = this.receiver;
 		iban = this.iban;
 		purpose = this.purpose;
 		date = this.date;
 	}
-	
-	
 
 	public int getId() {
 		return id;

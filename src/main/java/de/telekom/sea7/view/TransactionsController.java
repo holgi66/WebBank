@@ -14,11 +14,11 @@ import de.telekom.sea7.services.TransactionService;
 public class TransactionsController {
 	
 	@Autowired
-	private TransactionService transactionService;
+	private TransactionsService transactionsService;
 
-	@GetMapping ("/transaction/")
+	@GetMapping ("/transactions/")
 	public Transaction getTransaction() {
-		return transactionService.getTransaction() ;
+		return transactionsService.getTransactionsImpl() ;
 		
 	}
 	
