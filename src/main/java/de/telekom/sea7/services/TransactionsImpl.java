@@ -1,8 +1,6 @@
 package de.telekom.sea7.services;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Iterator;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -10,54 +8,48 @@ public class TransactionsImpl {
 
 	private ArrayList<TransactionsImpl> transactions = new ArrayList<>();
 
-	public void getTransactionsImpl {
+	public void getTransactionsImpl()
+	{
 		int tester = 1;
-		for (int i=0; i<20 ; i++) {
+		for (int i = 0; i < 20; i++) {
 			TransactionsImpl testdata = new TransactionsImpl();
 			testdata.getReceiver("Receiver" + tester);
 			testdata.getIban("IBAN" + tester);
 			testdata.getBIC("BIC" + tester);
-			testdata.getAmount(tester+tester+tester + 1.33);
-			testdata.getCurrency("EURO");
+			testdata.getAmount(tester + tester + tester + 1.33);
 			testdata.getPurpose("Purpose" + tester);
 			tester++;
 		}
 	}
+
 	private void getReceiver(String string) {
-		// TODO Auto-generated method stub
-		
+		this.getReceiver(string);
+
 	}
+
 	private void getPurpose(String string) {
-		// TODO Auto-generated method stub
-		
+		this.getPurpose(string);
+
 	}
-	private void getCurrency(String string) {
-		// TODO Auto-generated method stub
-		
-	}
+
+
 	private void getAmount(double d) {
-		// TODO Auto-generated method stub
-		
+		this.getAmount(d);
+
 	}
+
 	private void getBIC(String string) {
-		// TODO Auto-generated method stub
-		
+		this.getBIC(string);
+
 	}
+
 	private void getIban(String string) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	
-	
-	
-	
-	
-	
-
-		
-	
+		this.getIban(string);
 
 	}
+	
+	public java.util.Iterator<TransactionsImpl> iterator() {
+		return transactions.iterator();
+	}
 
-
+}
