@@ -3,57 +3,61 @@ package de.telekom.sea7.services;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Iterator;
-
 import org.springframework.stereotype.Service;
 
-import de.telekom.sea7.model.Iban;
-import de.telekom.sea7.model.Receiver1;
-import de.telekom.sea7.model.Transaction;
-import de.telekom.sea7.model.Transactions;
-
 @Service
-public class TransactionsImpl implements Transactions {
+public class TransactionsImpl {
 
-	private ArrayList<Transactions<transactions>> transactions = new ArrayList<>();
+	private ArrayList<TransactionsImpl> transactions = new ArrayList<>();
 
-	public void addTestData(int range) {
+	public void getTransactionsImpl {
 		int tester = 1;
-		for (int i=0; i< range; i++) {
-			Transaction testdata = new TransactionService();
-			testdata.setReceiver("Receiver" + tester);
-			testdata.setIban("IBAN" + tester);
-			testdata.setBIC("BIC" + tester);
-			testdata.setAmount(tester+tester+tester + 1.33);
-			testdata.setCurrency("EURO");
-			testdata.setPurpose("Purpose" + tester);
-			transactions.add(testdata);
+		for (int i=0; i<20 ; i++) {
+			TransactionsImpl testdata = new TransactionsImpl();
+			testdata.getReceiver("Receiver" + tester);
+			testdata.getIban("IBAN" + tester);
+			testdata.getBIC("BIC" + tester);
+			testdata.getAmount(tester+tester+tester + 1.33);
+			testdata.getCurrency("EURO");
+			testdata.getPurpose("Purpose" + tester);
 			tester++;
 		}
 	}
-
-	
-	
-	
-	
-	
-	
-	
-	public void add(Transactions transactions) {
-transactions.add(transactions);
+	private void getReceiver(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+	private void getPurpose(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+	private void getCurrency(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+	private void getAmount(double d) {
+		// TODO Auto-generated method stub
+		
+	}
+	private void getBIC(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+	private void getIban(String string) {
+		// TODO Auto-generated method stub
 		
 	}
 
-	public Iterator iterator() {
-		return TransactionsImpl.iterator();
+	
+	
+	
+	
+	
+	
+
+		
+	
+
 	}
 
-	public int getIndex(Transaction nr) {
-		return this.transactions.indexOf(nr);
 
-	}
-
-	public Transaction getTransaction(int index) {
-		return (Transaction) TransactionImpl.get(index);
-	}
-
-}
