@@ -7,7 +7,7 @@ import java.util.Iterator;
 import org.springframework.stereotype.Service;
 
 import de.telekom.sea7.model.Iban;
-import de.telekom.sea7.model.Receiver;
+import de.telekom.sea7.model.Receiver1;
 import de.telekom.sea7.model.Transaction;
 import de.telekom.sea7.model.Transactions;
 

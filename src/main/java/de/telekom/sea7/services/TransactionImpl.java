@@ -1,77 +1,65 @@
 package de.telekom.sea7.services;
 
-import java.time.LocalDateTime;
 
+import java.util.ArrayList;
 import org.springframework.stereotype.Service;
 
-import de.telekom.sea7.model.Iban;
-import de.telekom.sea7.model.Receiver;
-import de.telekom.sea7.model.Transaction;
 
 @Service
-public class TransactionImpl implements Transaction {
+public class TransactionImpl {
+	
+	private ArrayList<TransactionImpl> transaction = new ArrayList<>();
+	
+	
+	public void getTransactionImpl() {
+		return;
+	}
+	
+	
+	
+	
+	public void addTransactionImpl() {
+		int tester =1;
+		 {
+			TransactionImpl testdata = new TransactionImpl();
+			testdata.setReceiver("Receiver" + tester);
+			testdata.setIban("IBAN" + tester);
+			testdata.setBic("BIC" + tester);
+			testdata.setAmount("Amount" + tester);
+			testdata.setPurpose("Purpose" + tester);
+			transaction.add(testdata);			
+		}
+	}
+	
 
-	private float amount;
-	private int id;
-	private Receiver receiver;
-	private Iban iban;
-	private String purpose;
-	private LocalDateTime date;
-
-	public TransactionImpl(float amount, Receiver receiver, Iban iban, String purpose, LocalDateTime date) {
-		amount = this.amount;
-		receiver = this.receiver;
-		iban = this.iban;
-		purpose = this.purpose;
-		date = this.date;
+	private void setPurpose(String string) {
+		this.setPurpose(string);
+		
 	}
 
-	public int getId() {
-		return id;
+	private void setAmount(String string) {
+		this.setAmount(string);
+		
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	private void setBic(String string) {
+		this.setBic(string);
+		
 	}
 
-	public float getAmount() {
-		return amount;
+	private void setIban(String string) {
+	this.setIban(string);
+		
 	}
 
-	public void setAmount(float amount) {
-		this.amount = amount;
+	private void setReceiver(String string) {
+		this.setReceiver(string);
+		
 	}
 
-	public Receiver getReceiver() {
-		return receiver;
+	public java.util.Iterator<TransactionImpl> iterator() {
+		return transaction.iterator();
 	}
-
-	public void setReceiver(Receiver receiver) {
-		this.receiver = receiver;
-	}
-
-	public Iban getIban() {
-		return iban;
-	}
-
-	public void setIban(Iban iban) {
-		this.iban = iban;
-	}
-
-	public String getPurpose() {
-		return purpose;
-	}
-
-	public void setPurpose(String purpose) {
-		this.purpose = purpose;
-	}
-
-	public LocalDateTime getDate() {
-		return date;
-	}
-
-	public void setDate(LocalDateTime date) {
-		this.date = date;
-	}
+	
 
 }
