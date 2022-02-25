@@ -18,4 +18,9 @@ public class TransactionsService {
 	public TransactionsService addTransactionsImpl() {
 		return transactions;
 	}
+
+	public void getReceiver(String string) {
+		// TODO Auto-generated method stub
+		
+	}
 }
