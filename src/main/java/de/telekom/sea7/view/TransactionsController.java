@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import de.telekom.sea7.model.Transaction;
 import de.telekom.sea7.services.TransactionService;
+import de.telekom.sea7.services.TransactionsService;
 
 @RestController
 public class TransactionsController {

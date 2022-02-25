@@ -2,15 +2,20 @@ package de.telekom.sea7.services;
 
 
 
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-import de.telekom.sea7.model.Transactions;
 
+@Component
 @Service
 public class TransactionsService {
 
-	private Transactions transactions = new TransactionsImpl();
+	private TransactionsService transactions = new TransactionsService();
 
-	public Transactions getTransactionsImpl() {
+	public TransactionsService getTransactionsImpl() {
+		return transactions;
+	}
+	
+	public TransactionsService addTransactionsImpl() {
 		return transactions;
 	}
 }
