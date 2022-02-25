@@ -6,11 +6,11 @@ documen.getElementById("button").addEventListener("click", post);
 function post() {
 // read input
 	var input = {
-		receiver:   document.getElementById("Receiver").value,
-		iban:       document.getElementById("IBAN").value,
-		bic:        document.getElementById("BIC").value,
-		amount:     document.getElementById("Amount").value,
-		purpose:    document.getElementById("Purpose").value,
+		receiver:   document.getElementById("receiver").value,
+		iban:       document.getElementById("iban").value,
+		bic:        document.getElementById("bic").value,
+		amount:     document.getElementById("amount").value,
+		purpose:    document.getElementById("purpose").value,
 	}
 // change String to json
     var json = JSON.stringify(input)
