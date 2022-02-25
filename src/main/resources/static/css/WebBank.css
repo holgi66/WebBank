@@ -1,0 +1,40 @@
+@supports (display:grid) { 
+	
+.header-border {
+	         color: darkgreen;
+	         max-wigth: 600px;
+	         align-items: center;
+	         border: black 4px solid;
+	         }
+	
+	.title { 
+	         color: darkgreen;
+	         max-wigth: 600px;
+	         align-items: center;
+	         border: black 4px solid;
+            }
+            
+    .header2 {        
+	         color: darkgreen;
+	         max-wigth: 600px;
+	         align-items: center;
+             }
+    
+    .text1 {
+             color: black;
+	         max-wigth: 600px;
+	         align-items: left;
+            }
+            
+   .auswahl {
+            color: black;
+	         max-wigth: 600px;
+	         align-items: left;            
+            }
+            
+   .feadline {
+            color: black;
+	         max-wigth: 600px;
+	         align-items: left;            
+            }
+}

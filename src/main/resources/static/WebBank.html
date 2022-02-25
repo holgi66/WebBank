@@ -3,44 +3,67 @@
 <html>
 
 <head>
-     <title>  WebBank Banco de LOSTA</title>
-     <meta charset="UTF-8">
-     <link href"css/main.css" rel="stylesheet">
-     
-     <div class="header-border">
-     <h1>BANCO de LOSTA</h1>
-     </div>
-     
+<title>WebBank Banco de LOSTA</title>
+<meta charset="UTF-8">
+<link href"css/WebBank.css" rel="stylesheet">
+
+<div class="header-border">
+	<h1>BANCO de LOSTA</h1>
+</div>
+
 </head>
 <body>
 
-<h1>BANCO de LOSTA</h1>
+	<div class="grid-container">
 
-<h2>Losta Monetas</h2>
+		<div class="title">
+			<h1>BANCO de LOSTA</h1>
+		</div>
 
-<p>Futschi Kato</p>
+		<div class="header2">
+			<h2>Losta Monetas</h2>
+		</div>
 
-<p> Olla </p>
+		<div class="text1">
+			<p>Futschi Kato</p>
 
-<p> Welche Action soll ausgeführt werden: Bitte Button drücken </p>
+			<p>Olla</p>
+		</div>
 
-<button id="showtransactions" type="button">show Transactions</button><br><br>
-<button id="addtransaction" type="button">Transaction</button><br><br>
-<p>Receiver</p>
-<input id="receiver" type="text" value=""><br>
-<p>IBAN</p>
-<input id="iban" type="text" value=""><br>
-<p>BIC</p>
-<input id="bic" type="text" value=""><br>
-<p>Amount</p>
-<input id="amount" type="text" value=""><br>
-<p>Purpose</p>
-<input id="purpose" type="text" value=""><br><br>
+		<div class="auswahl">
+			<p>Welche Action soll ausgeführt werden: Bitte Button drücken</p>
 
-<button id="showtransaction" type="button">show Transaction</button><br><br>
+			<script src="js/transaction.js" type="module"> </script>
 
-<p> bei Fragen bitte eine Mail an Niemanden: </p>
-<a href="mailto:niemanden@banane.org">hiermit senden Sie eine E-Mail an Niemanden</a>
+			<button id="showtransactions" type="button">show
+				Transactions</button>
+			<br>
+			<br>
+			<button id="addtransaction" type="button">Transaction</button>
+			<br>
+			<br>
+			<p>Receiver</p>
+			<input id="receiver" type="text" value=""><br>
+			<p>IBAN</p>
+			<input id="iban" type="text" value=""><br>
+			<p>BIC</p>
+			<input id="bic" type="text" value=""><br>
+			<p>Amount</p>
+			<input id="amount" type="text" value=""><br>
+			<p>Purpose</p>
+			<input id="purpose" type="text" value=""><br>
+			<br>
 
+			<button id="showtransaction" type="button">show Transaction</button>
+			<br>
+			<br>
+		</div>
+
+		<div class="feadline">
+			<p>bei Fragen bitte eine Mail an Niemanden:</p>
+			<a href="mailto:niemanden@banane.org">hiermit senden Sie eine
+				E-Mail an Niemanden</a>
+		</div>
+	</div>
 
 </body>
