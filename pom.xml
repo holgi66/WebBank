@@ -34,6 +34,7 @@
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf -->
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -45,16 +46,23 @@
 			<optional>true</optional>
 		</dependency>
 
+<<<<<<< HEAD
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
 
+=======
+>>>>>>> branch 'step8' of git@github.com:holgi66/WebBank.git
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'step8' of git@github.com:holgi66/WebBank.git
 		</dependency>
 
 	</dependencies>
