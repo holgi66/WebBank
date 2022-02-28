@@ -1,4 +1,4 @@
-package de.telekom.sea7.persistence;
+package de.telekom.sea7.entity;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
