@@ -7,5 +7,4 @@ import de.telekom.sea7.entity.Bankdb;
 @Repository
 public interface BankRepository extends JpaRepository<Bankdb, Long> {
 
-
 }
