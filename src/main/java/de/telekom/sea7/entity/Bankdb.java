@@ -8,29 +8,19 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
-
-@Component
 @Entity
 public class Bankdb {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int ID;
+	private Long id;
 	private int receiver_ID;
 	private int iban_ID;
 	private BigDecimal amount;
 	private String purpose;
 	private Timestamp date;
 
-	public Bankdb(int ID, int receiver_ID, int iban_ID, BigDecimal amount, String purpose, Timestamp date) {
-		this.ID = ID;
-		this.setReceiver_ID(receiver_ID);
-		this.setIban_ID(iban_ID);
-		this.setAmount(amount);
-		this.setPurpose(purpose);
-		this.setDate(date);
+	public Bankdb() {
 
 	}
 
