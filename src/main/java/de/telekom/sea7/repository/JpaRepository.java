@@ -2,9 +2,12 @@ package de.telekom.sea7.repository;
 
 import java.util.Optional;
 
-import org.springframework.data.repository.Repository;
+import org.springframework.stereotype.Repository;
 
-public interface JpaRepository<T, ID> extends Repository<T, ID>{
+
+
+@Repository
+public interface JpaRepository<T, ID> {
 	//Create , Update entity
 	<S extends T> S save(S var1);
 	
