@@ -11,7 +11,7 @@ public class TransactionsService {
 	@Autowired
 	public BankRepository transactions;
 
-	public BankRepository getTransactionsImpl() {
+	public BankRepository findAll() {
 		return transactions;
 	}
 
