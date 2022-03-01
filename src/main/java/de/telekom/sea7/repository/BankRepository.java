@@ -1,9 +1,10 @@
 package de.telekom.sea7.repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import de.telekom.sea7.entity.Bankdb;
+import de.telekom.sea7.entity.Transaction;
 
 @Repository
-public interface BankRepository extends CrudRepository<Bankdb, Long> {
+public interface BankRepository extends JpaRepository<Transaction, Long> {
 
 }
