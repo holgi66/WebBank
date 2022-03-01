@@ -4,7 +4,7 @@ import java.util.Optional;
 
 import org.springframework.data.repository.Repository;
 
-public interface CrudRepository<T, ID> extends Repository<T, ID>{
+public interface JpaRepository<T, ID> extends Repository<T, ID>{
 	//Create , Update entity
 	<S extends T> S save(S var1);
 	
