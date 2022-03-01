@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import de.telekom.sea7.entity.Transaction;
-import de.telekom.sea7.repository.BankRepository;
+import de.telekom.sea7.repository.TransactionRepository;
 import de.telekom.sea7.services.TransactionService;
 
 
@@ -18,7 +18,7 @@ import de.telekom.sea7.services.TransactionService;
 public class TransactionController {
 	
 	@Autowired
-	private BankRepository repository;
+	private TransactionRepository repository;
 
 
 	@GetMapping("/transaction")

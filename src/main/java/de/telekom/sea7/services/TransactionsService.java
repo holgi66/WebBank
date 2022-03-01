@@ -3,15 +3,15 @@ package de.telekom.sea7.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import de.telekom.sea7.repository.BankRepository;
+import de.telekom.sea7.repository.TransactionRepository;
 
 @Service
 public class TransactionsService {
 
 	@Autowired
-	public BankRepository transactions;
+	public TransactionRepository transactions;
 
-	public BankRepository findAll() {
+	public TransactionRepository findAll() {
 		return transactions;
 	}
 
