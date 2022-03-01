@@ -5,13 +5,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import de.telekom.sea7.repository.BankRepository;
+import de.telekom.sea7.repository.TransactionsRepository;
 
 @RestController
 public class TransactionsController {
 	
 	@Autowired
-	private BankRepository repository;
+	private TransactionsRepository repository;
 
 	@GetMapping("/transactions")
 	public String getTransactions(Model model) {
