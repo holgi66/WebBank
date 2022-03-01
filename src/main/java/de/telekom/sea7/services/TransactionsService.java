@@ -1,19 +1,18 @@
 package de.telekom.sea7.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import de.telekom.sea7.repository.BankRepository;
 
 @Service
 public class TransactionsService {
 
-	private TransactionsService transactions = new TransactionsService();
+	@Autowired
+	public BankRepository transactions;
 
-	public TransactionsService getTransactionsImpl() {
-		return transactions;
-	}
-	
-	public TransactionsService addTransactionsImpl() {
+	public BankRepository findAll() {
 		return transactions;
 	}
 
-	
 }
