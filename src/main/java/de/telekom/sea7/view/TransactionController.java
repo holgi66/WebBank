@@ -3,10 +3,12 @@ package de.telekom.sea7.view;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
 
 import de.telekom.sea7.entity.Transactions;
 import de.telekom.sea7.repository.TransactionsRepository;
@@ -26,7 +28,7 @@ public class TransactionController {
 			return optionalTransaction.get();
 		}
 
-		return null;
+		throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Ungültige ID!");
 	}
 
 	@PostMapping("/transaction/")
