@@ -2,8 +2,7 @@ package de.telekom.sea7.view;
 
 import java.util.Optional;
 
-import javax.persistence.OneToMany;
-
+import javax.persistence.ManyToOne;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,14 +18,12 @@ import de.telekom.sea7.services.TransactionService;
 @RestController
 public class TransactionController {
 
-	@OneToMany
+	@ManyToOne
 	@Autowired
 	private TransactionsRepository repository;
 
-	
 	@GetMapping("/transaction/{id}")
 	public Transactions getTransaction(@PathVariable("id") Long id) {
-
 
 		Optional<Transactions> optionalTransaction = repository.findById(id);
 		if (optionalTransaction.isPresent()) {
