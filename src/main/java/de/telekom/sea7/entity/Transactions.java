@@ -23,12 +23,6 @@ public class Transactions {
 	private BigDecimal amount;
 	private String purpose;
 	private Timestamp date;
-
-	@ManyToOne
-	@JoinColumn(name = "iban_id")
-	private String iban;
-	@JoinColumn(name = "receiver_id")
-    private String receiver;
 	
 	public Long getId() {
 		return id;
@@ -62,23 +56,31 @@ public class Transactions {
 		this.date = date;
 	}
 
-	public String getIban(String Long) {
-		Iban restoration = IbanRepository.findById(Long).get();
+	@ManyToOne
+	@JoinColumn(name = "iban_id")
+	private String iban;
+	
+	public Iban getIban() {
+		Iban iban = IbanRepository.findById(1L).get();
 		return iban;
 	}
 	
-	public void setIban(String iban) {
-		this.iban = iban;
-	}
+//	public void setIban(String iban) {
+//		this.iban = iban;
+//	}
+
+	@ManyToOne
+	@JoinColumn(name = "receiver_id")
+    private String receiver;
 	
-	public String getReceiver(Object Long) {
-		Receiver restoration = ReceiverRepository.findById(Long).get();
+	public Receiver getReceiver() {
+		Receiver receiver = ReceiverRepository.findById(1L).get();
 		return receiver;
 	}
 
-	public void setReceiver(String receiver) {
-		this.receiver = receiver;
-	}
+//	public void setReceiver(String receiver) {
+//		this.receiver = receiver;
+//	}
 	
 	public Transactions() {
 	}
