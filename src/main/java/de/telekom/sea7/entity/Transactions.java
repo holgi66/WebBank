@@ -16,6 +16,10 @@ public class Transactions {
 	private Long id;
 	private int receiver_ID;
 	private int iban_ID;
+	private BigDecimal amount;
+	private String purpose;
+	private Timestamp date;
+	
 	public Long getId() {
 		return id;
 	}
@@ -55,10 +59,6 @@ public class Transactions {
 	public void setDate(Timestamp date) {
 		this.date = date;
 	}
-
-	private BigDecimal amount;
-	private String purpose;
-	private Timestamp date;
 
 	public Transactions() {
 	}
