@@ -3,9 +3,9 @@ package de.telekom.sea7.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import de.telekom.sea7.entity.Transaction;
+import de.telekom.sea7.entity.Transactions;
 
 @Repository
-public interface TransactionsRepository extends JpaRepository<Transaction, Long> {
+public interface TransactionsRepository extends JpaRepository<Transactions, Long> {
 
 }
