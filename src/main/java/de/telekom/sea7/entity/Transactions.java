@@ -15,7 +15,7 @@ public class Transactions {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private int receiver_ID;
-	private int iban_ID;
+	private int iban;
 	private BigDecimal amount;
 	private String purpose;
 	private Timestamp date;
@@ -28,12 +28,12 @@ public class Transactions {
 		this.id = id;
 	}
 
-	public int getIban_ID() {
-		return iban_ID;
+	public int getIban() {
+		return iban;
 	}
 
-	public void setIban_ID(int iban_ID) {
-		this.iban_ID = iban_ID;
+	public void setIban(int iban_ID) {
+		this.iban = iban_ID;
 	}
 
 	public BigDecimal getAmount() {
