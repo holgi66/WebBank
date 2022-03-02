@@ -9,8 +9,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-
+import de.telekom.sea7.entity.Iban;
+import de.telekom.sea7.entity.Receiver;
 import de.telekom.sea7.repository.IbanRepository;
+import de.telekom.sea7.repository.ReceiverRepository;
 
 @Entity
 public class Transactions {
@@ -60,8 +62,8 @@ public class Transactions {
 		this.date = date;
 	}
 
-	public String getIban() {
-		Class<IbanRepository> restoration = IbanRepository.class;
+	public String getIban(String Long) {
+		Iban restoration = IbanRepository.findById(Long).get();
 		return iban;
 	}
 	
@@ -69,8 +71,8 @@ public class Transactions {
 		this.iban = iban;
 	}
 	
-	public String getReceiver() {
-		Class<ReceiverRepository> restoration = ReceiverRepository.class;
+	public String getReceiver(Object Long) {
+		Receiver restoration = ReceiverRepository.findById(Long).get();
 		return receiver;
 	}
 
