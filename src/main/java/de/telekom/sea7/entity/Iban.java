@@ -10,9 +10,9 @@ public class Iban {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
 	private int bic_ID;
 	private String iban;
+	private Long id;
 
 	public Long getId() {
 		return id;

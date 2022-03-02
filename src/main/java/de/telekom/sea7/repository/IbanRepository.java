@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import de.telekom.sea7.entity.Iban;
 
 @Repository
-public interface IbanRepository extends JpaRepository<Iban, Long> {
+public interface IbanRepository extends JpaRepository<Iban, String> {
 
 }
