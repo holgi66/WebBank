@@ -23,7 +23,7 @@ public class Transactions {
 	private BigDecimal amount;
 	private String purpose;
 	private Timestamp date;
-	
+
 	public Long getId() {
 		return id;
 	}
@@ -59,20 +59,16 @@ public class Transactions {
 	@ManyToOne
 	@JoinColumn(name = "iban_id")
 	private String iban;
-	
+
 	public Iban getIban() {
 		Iban iban = IbanRepository.findById(1L).get();
 		return iban;
 	}
-	
-//	public void setIban(String iban) {
-//		this.iban = iban;
-//	}
 
 	@ManyToOne
 	@JoinColumn(name = "receiver_id")
-    private String receiver;
-	
+	private String receiver;
+
 	public Receiver getReceiver() {
 		Receiver receiver = ReceiverRepository.findById(1L).get();
 		return receiver;
@@ -81,10 +77,8 @@ public class Transactions {
 //	public void setReceiver(String receiver) {
 //		this.receiver = receiver;
 //	}
-	
+
 	public Transactions() {
 	}
-
-
 
 }
