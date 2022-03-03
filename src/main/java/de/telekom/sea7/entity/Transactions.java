@@ -9,8 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import de.telekom.sea7.entity.Iban;
-import de.telekom.sea7.entity.Receiver;
 import de.telekom.sea7.repository.IbanRepository;
 import de.telekom.sea7.repository.ReceiverRepository;
 
