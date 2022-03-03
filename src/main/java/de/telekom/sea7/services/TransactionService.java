@@ -1,6 +1,7 @@
 package de.telekom.sea7.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.data.annotation.Id;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +12,7 @@ public class TransactionService {
 	
 @Autowired
 	public TransactionRepository transaction;
+
 
 	public TransactionRepository findById(Id var1) {
 		return transaction;
