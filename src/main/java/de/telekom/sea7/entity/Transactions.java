@@ -58,7 +58,7 @@ public class Transactions {
 
 	@ManyToOne
 	@JoinColumn(name = "iban_id")
-	private String iban;
+	private Iban iban;
 	
 	public Iban getIban() {
 		Iban iban = IbanRepository.findById(1L).get();
@@ -71,7 +71,7 @@ public class Transactions {
 
 	@ManyToOne
 	@JoinColumn(name = "receiver_id")
-    private String receiver;
+    private Receiver receiver;
 	
 	public Receiver getReceiver() {
 		Receiver receiver = ReceiverRepository.findById(1L).get();
