@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 import de.telekom.sea7.entity.Transactions;
 
 @Repository
+
 public interface TransactionRepository extends JpaRepository<Transactions, Long> {
 
 }
