@@ -8,7 +8,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.stereotype.Service;
 
 import de.telekom.sea7.entity.TransactionBean;
-import de.telekom.sea7.entity.TransactionsBean;
+import de.telekom.sea7.entity.TransactionsEntity;
 import de.telekom.sea7.repository.TransactionRepository;
 
 @Service
