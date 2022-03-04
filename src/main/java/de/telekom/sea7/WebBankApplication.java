@@ -10,7 +10,6 @@ public class WebBankApplication {
         public static void main(String[] args) {
                 SpringApplication.run(WebBankApplication.class, args);
              
-
 	}
 
 }
