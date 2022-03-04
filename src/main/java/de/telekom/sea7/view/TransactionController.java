@@ -2,7 +2,6 @@ package de.telekom.sea7.view;
 
 import java.util.Optional;
 
-import javax.persistence.ManyToOne;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,21 +10,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import de.telekom.sea7.entity.Transactions;
-import de.telekom.sea7.repository.TransactionsRepository;
+import de.telekom.sea7.entity.TransactionBean;
+import de.telekom.sea7.repository.TransactionRepository;
 import de.telekom.sea7.services.TransactionService;
 
 @RestController
 public class TransactionController {
 
-	@ManyToOne
 	@Autowired
-	private TransactionsRepository repository;
+	private TransactionRepository repository;
 
 	@GetMapping("/transaction/{id}")
-	public Transactions getTransaction(@PathVariable("id") Long id) {
+	public TransactionBean getTransaction(@PathVariable("id") Long id) {
 
-		Optional<Transactions> optionalTransaction = repository.findById(id);
+		Optional<TransactionBean> optionalTransaction = repository.findById(id);
 		if (optionalTransaction.isPresent()) {
 			return optionalTransaction.get();
 		}
