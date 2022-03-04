@@ -11,19 +11,18 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import de.telekom.sea7.entity.TransactionBean;
-import de.telekom.sea7.repository.TransactionRepository;
 import de.telekom.sea7.services.TransactionService;
 
 @RestController
 public class TransactionController {
 
 	@Autowired
-	private TransactionRepository repository;
+	private TransactionService transactionService;
 
 	@GetMapping("/transaction/{id}")
 	public TransactionBean getTransaction(@PathVariable("id") Long id) {
 
-		Optional<TransactionBean> optionalTransaction = repository.findById(id);
+		Optional<TransactionBean> optionalTransaction = transactionService.findById(id);
 		if (optionalTransaction.isPresent()) {
 			return optionalTransaction.get();
 		}
