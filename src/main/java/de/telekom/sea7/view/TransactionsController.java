@@ -6,8 +6,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
-import de.telekom.sea7.entity.TransactionsBean;
+import de.telekom.sea7.entity.TransactionsEntity;
 import de.telekom.sea7.repository.TransactionsRepository;
+import de.telekom.sea7.services.TransactionsService;
 
 
 
@@ -15,13 +16,13 @@ import de.telekom.sea7.repository.TransactionsRepository;
 public class TransactionsController {
 	
 	@Autowired
-	private TransactionsRepository transactionsRepository;
+	private TransactionsService transactionsService;
 
 	@GetMapping("/transactions/")
-	public List<TransactionsBean> getTransactions() {
+	public List<TransactionsEntity> getTransactions() {
 
-		List<TransactionsBean> optionalTransactions = transactionsRepository.findAll();
-		if (optionalTransactions.add((TransactionsBean) getTransactions())) {
+		List<TransactionsEntity> optionalTransactions = optionalTransactions.findAll();
+		if (optionalTransactions.add((TransactionsEntity) getTransactions())) {
 			return optionalTransactions;
 		}
 
