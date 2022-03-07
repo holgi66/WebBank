@@ -71,5 +71,4 @@ public class TransactionsEntity  {
 
 	public TransactionsEntity() {
 	}
-
 }
