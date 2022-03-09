@@ -18,15 +18,24 @@ public class TransactionsController {
 	@Autowired
 	private TransactionsService transactionsService;
 
+	@SuppressWarnings("unchecked")
 	@GetMapping("/transactions/")
 	public List<TransactionsEntity> getTransactions() {
 
-		List<TransactionsEntity> optionalTransactions = optionalTransactions.findAll();
+		List<TransactionsEntity> optionalTransactions = (List<TransactionsEntity>) transactionsService.findAll();
 		if (optionalTransactions.add((TransactionsEntity) getTransactions())) {
 			return optionalTransactions;
 		}
 
 		throw new ResponseStatusException(HttpStatus.NOT_FOUND, "keine Einträge vorhanden!");
+	}
+
+	public TransactionsService getTransactionsService() {
+		return transactionsService;
+	}
+
+	public void setTransactionsService(TransactionsService transactionsService) {
+		this.transactionsService = transactionsService;
 	}
 	
 }
