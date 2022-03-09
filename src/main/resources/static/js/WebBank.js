@@ -1,5 +1,5 @@
 //Listener
-documen.getElementById("button").addEventListener("click", post);
+document.getElementById("showtransaction").addEventListener("click", post);
 
 
 // send new entry at TEST API

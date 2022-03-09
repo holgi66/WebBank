@@ -31,70 +31,48 @@
 
 			<script src="js/WebBank.js" type="module"> </script>
 
-			<button id="showtransactions" type="button">alle Überweisungen anzeigen</button>
+			<button id="showtransactions" type="button">alle
+				Überweisungen anzeigen</button>
+			<br> <br>
 			<br>
-			
-			<a href="/wizard">Add a new wizard !</a>
 
-<br><br>
+			<table>
 
-<table>
+				<thead>
 
-    <thead>
 
-    <tr>
+				</thead>
 
-        <th>Id</th>
+				<tbody>
 
-        <th>First name</th>
+					<tr th:each="transaction : ${transactions}">
 
-        <th>Last name</th>
+						<td th:text="${transaction.id}">id</td>
 
-        <th>Birthday</th>
+						<td th:text="${transaction.receiver_ID}">Name</td>
 
-        <th>Birth place</th>
+						<td th:text="${transaction.iban_ID}">IBAN</td>
 
-        <th>Biography</th>
+						<td th:text="${transaction.amount}">Summe</td>
 
-        <th>Muggle</th>
+						<td th:text="${transaction.purpose}">Verwendungszweck</td>
 
-        <th></th>
+						<td th:text="${transaction.date}">Datum</td>
 
-        <th></th>
+						<td><a th:href="@{/transaction(id=${transaction.id})}">Edit</a></td>
 
-    </tr>
+						<td><a th:href="@{/transaction/delete(id=${transaction.id})}">Remove</a></td>
 
-    </thead>
+					</tr>
+				</tbody>
 
-    <tbody>
+			</table>
 
-    <tr th:each="transaction : ${transactions}">
-
-        <td th:text="${transaction.id}">id</td>
-
-        <td th:text="${transaction.receiver_ID}">Name</td>
-
-        <td th:text="${transaction.iban_ID}">IBAN</td>
-
-        <td th:text="${transaction.amount}">Summe</td>
-
-        <td th:text="${transaction.purpose}">Verwendungszweck</td>
-
-        <td th:text="${transaction.date}">Datum</td>
-
-        <td><a th:href="@{/transaction(id=${transaction.id})}">Edit</a></td>
-
-        <td><a th:href="@{/transaction/delete(id=${transaction.id})}">Remove</a></td>
-
-    </tr>
-        </tbody>
-
-</table>
-			
 			<br>
-			<button id="showtransaction" type="button">eine Überweisung anzeigen</button>
-			<br>
-			<br>
+			<button id="showtransaction" type="button">eine Überweisung
+				anzeigen</button>
+			<p>Id</p>
+			<input id="id" type="text" value=""> <br> <br>
 			<p>Receiver</p>
 			<input id="receiver" type="text" value=""><br>
 			<p>IBAN</p>
@@ -104,12 +82,10 @@
 			<p>Amount</p>
 			<input id="amount" type="text" value=""><br>
 			<p>Purpose</p>
-			<input id="purpose" type="text" value=""><br>
-			<br>
+			<input id="purpose" type="text" value=""><br> <br>
 
 			<button id="addtransaction" type="button">überweisen</button>
-			<br>
-			<br>
+			<br> <br>
 		</div>
 
 		<div class="feadline">
