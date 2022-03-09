@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.data.annotation.Id;
 import org.springframework.stereotype.Service;
 
-import de.telekom.sea7.entity.TransactionBean;
+import de.telekom.sea7.entity.TransactionEntity;
 import de.telekom.sea7.entity.TransactionsEntity;
 import de.telekom.sea7.repository.TransactionRepository;
 
@@ -17,11 +17,11 @@ public class TransactionService {
 	@Autowired
 	public TransactionRepository transactionRepository;
 
-	public Optional<TransactionBean> findById(Long id) {
+	public Optional<TransactionEntity> findById(Long id) {
 		return transactionRepository.findById(id);
 	}
 
-	public TransactionBean save(TransactionBean transactionBean) {
+	public TransactionEntity save(TransactionEntity transactionBean) {
 		return transactionRepository.save(transactionBean);
 	}
 
